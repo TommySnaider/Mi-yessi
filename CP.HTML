@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Minimalista</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f3e5f5; /* Morado pastel */
+            color: #4a148c; /* Morado oscuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff; /* Blanco */
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #6a1b9a; /* Morado medio */
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #7e57c2; /* Morado claro */
+        }
+
+        button {
+            background-color: #ab47bc; /* Morado pastel */
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #8e24aa; /* Morado más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PARA LA NIÑA MAS HERMOSA DEL MUNDO 💜🥰</h1>
+        <p>Presiona el botón cosita hermosa</p>
+        <p>¡FELIZ CUMPLEAÑOS MI AMOR¡¡</p>
+        <button id="playButton">🎵 PRESIONA AQUI COSITA :)</button>
+    </div>
+    <audio id="mañanitasAudio">
+        <source src="mañanitas.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <script>
+        // Obtener el botón y el audio
+        const playButton = document.getElementById('playButton');
+        const mañanitasAudio = document.getElementById('mañanitasAudio');
+
+        // Función para reproducir o pausar la canción
+        playButton.addEventListener('click', () => {
+            if (mañanitasAudio.paused) {
+                mañanitasAudio.play();
+                playButton.textContent = '⏸️ Pausar Las Mañanitas';
+            } else {
+                mañanitasAudio.pause();
+                playButton.textContent = '🎵 PRESIONA AQUI COSITA :)';
+            }
+            alert("¡FELIZ CUMPLEAÑOS MI AMOR! 🎉");
+        });
+    </script>
+</body>
+</html>
